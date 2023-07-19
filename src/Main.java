@@ -2,24 +2,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int InitialBalance = 100;
+        int initialBalance = 100;
         // Изначальный баланс счета
-        int TopUpAmount = 1100;
+        int topUpAmount = 1100;
         // Сумма пополнения
-        int BonusPerTopUp = TopUpAmount / 100;
+        int bonusPerTopUp = topUpAmount / 100;
         // Бонус от пополнения (более 1000 рублей) - 1 рубль за каждые 100 рублей пополнения
-        int FinalBalance;
+        int finalBalance;
         // Конечный баланс счета с учетом бонусов
 
 
-        if (TopUpAmount > 1000) {
-            FinalBalance = TopUpAmount + BonusPerTopUp + InitialBalance;
+        if (topUpAmount > 1000) {
+            finalBalance = topUpAmount + bonusPerTopUp + initialBalance;
         } else {
-            BonusPerTopUp = 0;
-            FinalBalance = InitialBalance + TopUpAmount;
+            bonusPerTopUp = 0;
+            finalBalance = initialBalance + topUpAmount;
         }
 
-        System.out.println("Текущий баланс счета: " + FinalBalance);
-        System.out.println("Количество бонусов: " + BonusPerTopUp);
+        System.out.println("Текущий баланс счета: " + finalBalance);
+        System.out.println("Количество бонусов: " + bonusPerTopUp);
     }
 }
